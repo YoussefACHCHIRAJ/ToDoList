@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+span{
+    color: red;
+}
+body{
+    background-color: #333;
+    color: whitesmoke;
+}
+header{
+    width: 100%;
+    min-height: 7em;
+    padding-left: 1em;
+    text-align: center;
+}
+header h1{
+    opacity: .5;
+    font-size: 4rem;
+    font-weight:600;
+    color: #000;
+    margin-top: -.25em;
+}
+#welcome{
+    margin-left: 1em;
+}
+#welcome #name{
+    background: 0;
+    border: 0;
+    outline: 0;
+    color: #999999;
+    font-size: 1.2rem;
+    margin-left: .5em;
+}
+main{
+    width: min(50em , calc( 90% - 2em) );
+    min-height: 32em;
+    height: auto;
+    margin: 2em auto;
+}
+.inputs{
+    width: 100%;
+    min-height: 13em;
+}
+.title , .addTask{
+    width: 100%;
+    margin-block: .5em;
+    height: 2.5em;
+    border: 0;
+    outline: 0;
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+.title{
+    padding: 1em;
+    transition: transform .5s ease-in-out;
+}
+.title:focus{
+    transform: scale(1.03);
+}
+.addTask{
+    cursor: pointer;
+    transition: opacity .5s ease-in-out;
+}
+.addTask:hover{
+    opacity: .7;
+}
+.timing{
+    display: flex;
+    margin: 0 auto;
+    min-height: 4em;
+    justify-content: space-around;
+    gap: .2em;
+    width: 90%;
+}
+.timing label {
+    text-align: center;
+    font-size: 1rem;
+    width: 86%;
+}
+.timing label input{
+    background: #555;
+    border: 0;
+    outline: 0;
+    width: 10em;
+    height: 2.5em;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+.timing span{
+    display: none;
+}
+.outputs{
+    width: 100%;
+    min-height: 10em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    justify-content: center;
+    padding: 1em;
+}
+.theTasks{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.taskList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3em;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    padding: .5em;
+}
+.taskList .content{
+    width: 70%;
+    padding: .2em;
+}
+.taskList input,
+.taskList button{
+     border: 0;
+     outline: 0;
+}
+.taskList .content input{
+    width: 100%;
+    height: 2.5em;
+    background: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    position: relative;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 1em;
+    color: #fff;
+}
+
+.taskList .btns{
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+}
+.taskList button{
+    width: 5em;
+    height: 2em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .5s ease-in-out;
+}
+.taskList button:hover{
+    opacity: .7;
+}
+.taskList .edit{
+    background: #444;
+    color: rgb(220, 5, 228);
+    margin-bottom: .5em;
+}
+.taskList .delete{
+    background: #222;
+    color: rgb(228, 5, 5);
+}
+@media (max-width: 950px){
+  .taskList{
+    flex-direction: column;
+  }
+  .taskList .content{
+    width: 90%;
+  }
+  .taskList .timer{
+    flex-direction: row;
+  }
+  .taskList .btns{
+    flex-direction: row;
+    gap: 1em;
+  }
+}
